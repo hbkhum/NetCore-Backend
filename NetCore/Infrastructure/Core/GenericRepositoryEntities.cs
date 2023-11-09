@@ -90,7 +90,7 @@ namespace NetCore.Infrastructure.Core
 
         public async Task StoredProcedure(string strSQL)
         {
-            await _entities.Database.ExecuteSqlCommandAsync(strSQL);
+            await _entities.Database.ExecuteSqlRawAsync(strSQL);
         }
 
 
