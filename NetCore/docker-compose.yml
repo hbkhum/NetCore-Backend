@@ -10,13 +10,13 @@ services:
     depends_on:
       - mysqldb
     environment:
-      - ConnectionStrings__DefaultConnection=Server=mysqldb;Port=3306;Database=mydatabase;User=root;Password=black;
+      - ConnectionStrings__DefaultConnection=Server=mysqldb;Port=3306;Database=VehicleContext;User=root;Password=black;
 
   mysqldb:
     image: linuxserver/mariadb
     environment:
       MYSQL_ROOT_PASSWORD: black
-      MYSQL_DATABASE: mydatabase
+      MYSQL_DATABASE: VehicleContext
       MYSQL_USER: myuser
       MYSQL_PASSWORD: mypassword
     ports:

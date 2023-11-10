@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NetCore.Infrastructure.Context;
 
@@ -10,9 +11,10 @@ using NetCore.Infrastructure.Context;
 namespace NetCore.Migrations
 {
     [DbContext(typeof(VehicleContext))]
-    partial class VehicleContextModelSnapshot : ModelSnapshot
+    [Migration("20231110010217_new-change")]
+    partial class newchange
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -263,9 +265,6 @@ namespace NetCore.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<int>("Tire")
-                        .HasColumnType("int");
-
                     b.Property<string>("VIN")
                         .IsRequired()
                         .HasColumnType("longtext");
@@ -295,9 +294,6 @@ namespace NetCore.Migrations
                     b.Property<string>("Model")
                         .IsRequired()
                         .HasColumnType("longtext");
-
-                    b.Property<int>("Tire")
-                        .HasColumnType("int");
 
                     b.Property<string>("VIN")
                         .IsRequired()

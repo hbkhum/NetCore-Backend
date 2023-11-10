@@ -16,6 +16,8 @@ builder.Services.AddDbContext<VehicleContext>(options =>
     var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
     options.UseMySql(connectionString, new MySqlServerVersion(new Version(8, 0, 21)),
         mySqlOptions => mySqlOptions.EnableRetryOnFailure());
+
+
 });
 
 builder.Services.TryAddTransient<ICarRepository, CarRepository>();

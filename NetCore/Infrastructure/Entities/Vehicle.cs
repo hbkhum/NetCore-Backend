@@ -16,5 +16,7 @@ namespace NetCore.Infrastructure.Entities
         [Required]
         public string Color { get; set; }
         public int Year { get; set; }
+        public int Tire { get; set; }
+        public int Mileage { get; set; }
     }
 }
