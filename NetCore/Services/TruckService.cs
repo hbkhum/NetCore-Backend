@@ -59,7 +59,10 @@ namespace NetCore.Services
                 Make = c.Make,
                 VIN = c.VIN,
                 Color = c.Color,
-                Model = c.Model
+                Model = c.Model, 
+                Year = c.Year,
+                Tire = c.Tire,
+                Mileage = c.Mileage
             });
         }
 
